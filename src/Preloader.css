@@ -1,0 +1,112 @@
+.preloader {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    z-index: 20;
+}
+
+@keyframes bounce-in-top {
+    0% {
+        transform: translateY(-300px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    38% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    55% {
+        transform: translateY(-65px);
+        animation-timing-function: ease-in;
+    }
+    72% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+    81% {
+        transform: translateY(-28px);
+        animation-timing-function: ease-in;
+    }
+    90% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+    95% {
+        transform: translateY(-8px);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#logo path:nth-child(7) {
+    animation: bounce-in-top 1.8s both;
+}
+#logo path:nth-child(8) {
+    animation: bounce-in-top 1.8s both;
+}
+#logo path:nth-child(1) {
+    stroke-width: 1;
+    stroke-dasharray: 393.5;
+    stroke-dashoffset: 393.5;
+    animation: line-anim 2s ease forwards;
+}
+#logo path:nth-child(2) {
+    stroke-width: 1;
+    stroke-dasharray: 430;
+    stroke-dashoffset: 430;
+    animation: line-anim 2s ease forwards .3s;
+}
+#logo path:nth-child(3) {
+    stroke-width: 1;
+    stroke-dasharray: 413;
+    stroke-dashoffset: 413;
+    animation: line-anim 2s ease forwards .6s;
+}
+#logo path:nth-child(4) {
+    stroke-width: 1;
+    stroke-dasharray: 290;
+    stroke-dashoffset: 290;
+    animation: line-anim 2s ease forwards .9s;
+}
+#logo path:nth-child(5) {
+    stroke-width: 1;
+    stroke-dasharray: 187;
+    stroke-dashoffset: 187;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+#logo path:nth-child(6) {
+    stroke-width: 1;
+    stroke-dasharray: 393;
+    stroke-dashoffset: 393;
+    animation: line-anim 2s ease forwards 1.5s;
+}
+
+svg {
+    animation: fill .6s ease-in forwards 3s;
+}
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+/*    to {
+        fill: ;
+    }*/
+}
