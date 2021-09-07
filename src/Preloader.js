@@ -1,11 +1,11 @@
 import React from 'react';
 import './Preloader.css'
-import { Container, Section } from 'react-materialize';
+import { Container } from 'reactstrap';
 
 const Preloader = () => {
     return (
-        <div className="content">
-            <Section className="preloader">
+        <div className="content-p">
+            <section className="preloader">
                 <Container className="lines-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="808" height="214" viewBox="0 0 808 214" fill="none" id="logo">
                         <g id="Frame 5">
@@ -20,7 +20,7 @@ const Preloader = () => {
                         </g>
                     </svg>
                 </Container>
-            </Section>
+            </section>
         </div>
     );
 };
