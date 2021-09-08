@@ -1,0 +1,16 @@
+:root {
+    --bg-color: #0a192f;
+    --primary: rgb(252, 220, 101);
+    --theme-font: #ccd6f6;
+    --primary-hover: rgba(252, 220, 101, 0.25);
+    --slate: #8892b0;
+}
+body {
+    background-color: var(--bg-color)!important;
+    color:  var(--theme-font) !important;
+    font-family: 'Inconsolata', serif!important;
+}
+
+a {
+    text-decoration: none!important;
+}
