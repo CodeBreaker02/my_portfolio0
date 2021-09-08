@@ -2,7 +2,7 @@
     --bg-color: #0a192f;
     --primary: rgb(252, 220, 101);
     --theme-font: #ccd6f6;
-    --primary-hover: #FCDC6524;
+    --primary-hover: rgba(252, 220, 101, 0.25);
     --slate: #8892b0;
 }
 body {

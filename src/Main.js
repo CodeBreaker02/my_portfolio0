@@ -1,6 +1,8 @@
 import React from 'react';
 import './Main.css'
 import Header from "./Components/Header";
+import {Col, Container, Row} from "reactstrap";
+import MyMe from "./Assets/me.jpg";
 
 const Main = () => {
     return (
@@ -22,7 +24,125 @@ const Main = () => {
                             I’m focused on building accessible, human-centered products at Upstatement.</p>
                     </div>
                     <div className="check-soc">
-                        <button type="button" className="btn-lg btn-outline-primary mt-5"><a href="{ResumeFr}" className="link-primary">Check out my socials!</a></button>
+                        <button type="button" className="btn-lg btn-outline-primary mt-5"><a href="" className="link-primary">Check out my socials!</a></button>
+                    </div>
+                </section>
+                <section className="about" id="about">
+                    <h4 className="numbered-heading">
+                        About Me
+                    </h4>
+                    <Row>
+                        <Col>
+                            <p>
+                                As a kid, I loved spending time on computers and surfing the internet. I was always intrigued by how Google and Facebook worked. My curiosity continued to grow so I decided to take my first web courses on <span>openClassroom</span>  (I was hooked right away, when I managed to display my first web page on my browser). I wanted to learn more, so I enrolled in <span>Epitech Benin</span> where I learned how to learn. <br/>
+                                <br/>
+                                <br/> Today, I'm still learning and doing what I love. As a <span>web developer</span> , I know how to adapt but my creativity remains intact. My specialties include <span>my ability to learn new skills and languages</span>. <br/> <br/> <br/> Here are a few technologies I’ve been working with recently:
+                            </p>
+                        </Col>
+                        <Col className="wrapper">
+                            <div className="wrap container mb-4">
+                                <img src={MyMe} alt="Logo" width="200" height="240"/>
+                            </div>
+                        </Col>
+                    </Row>
+                    <Row className="skills">
+                        <Col className="col-4">
+                            <ul>
+                                <li>React Js</li>
+                                <li>Materialize</li>
+                                <li>Bootstrap</li>
+                                <li>Node.js</li>
+                            </ul>
+                        </Col>
+                        <Col className="col-2">
+                            <ul>
+                                <li>Wix</li>
+                                <li>Figma</li>
+                                <li>Wordpress</li>
+                                <li>Javascript</li>
+                            </ul>
+                        </Col>
+                    </Row>
+                </section>
+                <section className="experience container p-3" id="experience">
+                    <Container>
+                        <h4 className="numbered-heading">
+                            Where I’ve Worked
+                        </h4>
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <div className="card">
+                                    <div className="card-body">
+                                        <h5 className="card-title"><a href="https://app.dokunvi.com/">@Dokunvi</a></h5>
+                                        <p className="card-text">
+                                            Internship of 4 months at Dokunvi.
+                                            I mainly work on features in React Js for their website.
+                                            Also prototyping pages with Figma and pages creation with Wix.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-6">
+                                <div className="card">
+                                    <div className="card-body">
+                                        <h5 className="card-title"><a href="http://pivotech.io/">@Pivotech</a></h5>
+                                        <p className="card-text">
+                                            During this internship I applied more my knowledge, and discover new technologies.
+
+                                            I had to work on the realization of the website of konta with Wordpress . And contribute to the migration of an application, with PHP, Symfony, Nginx.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-6">
+                                <div className="card">
+                                    <div className="card-body">
+                                        <h5 className="card-title"><a href="https://rightcom.com/fr/">@RightCom </a></h5>
+                                        <p className="card-text">
+                                            I spent most of my time with devops, where I discovered this new job, agile methods, Docker, Kubernetes, Jenkins, Ansible.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-sm-6 pt-4">
+                                <div className="card">
+                                    <div className="card-body">
+                                        <h5 className="card-title"><a href="https://epitech.bj/">@Epitech</a></h5>
+                                        <p className="card-text">
+                                            6 months internship, I had to work in the junior company of epitech Benin as a web developer.
+
+                                            I mainly contributed to the development of the Carreer Center website, much more focused on the frontend. I had to adapt to the architecture of the project with the assimilation of technologies and tools such as Jira, Angular 9 (ngrx) and Bootstrap.
+                                            <br/> <br/>
+                                            I worked as AER (Assistant Epitech Regional) consisted in accompanying the 1st year students, so that they could assimilate the knowledge without giving them the answer directly, but rather directing them to find it by their own means.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Container>
+                </section>
+                <section className="projects container p-3" id="project">
+                    <h4 className="numbered-heading">
+                        Projects
+                    </h4>
+                    <div className="row row-cols-1 row-cols-md-3">
+                        <div className="col mb-4">
+                            <div className="card p-2">
+                                <div className="top-card">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                         className="bi bi-folder" viewBox="0 0 16 16">
+                                        <path
+                                            d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/>
+                                    </svg>
+                                </div>
+                                <div className="card-body">
+                                    <h5 className="card-title fw-bold">Card title</h5>
+                                    <p className="card-text description">svvsbsbdgbgdbdb</p>
+                                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -30,7 +150,7 @@ const Main = () => {
             <div className="left-social">
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="https://github.com/mcjordan2002">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                  className="bi bi-github" viewBox="0 0 16 16">
                                 <path
@@ -39,7 +159,7 @@ const Main = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="https://linkedin.com/in/jordan-vitou">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                  className="bi bi-linkedin" viewBox="0 0 16 16">
                                 <path
@@ -48,7 +168,7 @@ const Main = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="https://twitter.com/jordan___vitou">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                  className="bi bi-twitter" viewBox="0 0 16 16">
                                 <path
