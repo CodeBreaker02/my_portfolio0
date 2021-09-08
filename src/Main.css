@@ -2,3 +2,54 @@ main {
     margin: 0 auto;
     width: 93.5%;
 }
+
+.sections {
+    margin-left: 15%;
+    margin-top: 6%;
+    margin-bottom: 5%;
+}
+
+.presentation h5 {
+    color: var(--primary);
+}
+
+.presentation .slate {
+    color: var(--slate);
+}
+
+.presentation .check-soc .btn-lg {
+     background-color: transparent;
+}
+
+.left-social {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    right: auto;
+    z-index: 10;
+    color: var(--slate);
+}
+
+.left-social ul {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.left-social ul li {
+    margin-bottom: 30px;
+}
+
+.left-social ul:after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: var(--slate);
+}
