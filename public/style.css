@@ -10,3 +10,7 @@ body {
     color:  var(--theme-font) !important;
     font-family: 'Inconsolata', serif!important;
 }
+
+a {
+    text-decoration: none!important;
+}

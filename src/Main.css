@@ -111,6 +111,7 @@ main {
 .projects .card {
     background-color: rgb(17,34,64);
 }
+
 .projects .top-card {
     display: flex;
     justify-content: space-between;
@@ -133,4 +134,18 @@ main {
     .numbered-heading::after {
         display: none!important;
     }
+}
+
+.contact {
+    max-width: 600px!important;
+    margin: 0px auto 100px;
+    text-align: center;
+}
+
+.contact h6 {
+    color: var(--primary);
+}
+
+section {
+    margin: 10%;
 }

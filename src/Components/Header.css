@@ -47,6 +47,5 @@ button:hover {
 }
 
 button a {
-    text-decoration: none;
     color: var(--primary) !important;
 }
