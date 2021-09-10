@@ -1,12 +1,9 @@
-import React, {useState} from 'react';
 import './Header.css'
 import Logo from '../Assets/logo.png'
 import ResumeFr from '../Assets/Resume-fr.pdf'
-import {Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink, Collapse} from "reactstrap";
+import {Icon, Navbar, NavItem} from "react-materialize";
 
 const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
     const links = [
         { href: '#about', text: 'About' },
         { href: '#experience', text: 'Experience' },
@@ -15,14 +12,38 @@ const Header = () => {
     ];
 
     const createNavItem = ({ href, text, className }) => (
-        <NavItem className="h-links p-lg-2">
-            <NavLink href={href} className={className}>{text}</NavLink>
-        </NavItem>
+        <NavItem href={href} className={className}>{text}</NavItem>
     );
 
     return (
         <header>
-            <Navbar dark  expand="md" className="d-flex justify-content-between">
+            <Navbar
+                alignLinks="right"
+                brand={<a className="brand-logo" href="#"><img src={Logo} alt="Logo" width="90" height="70"/></a>}
+                id="mobile-nav"
+                menuIcon={<Icon>menu</Icon>}
+                options={{
+                    draggable: true,
+                    edge: 'right',
+                    inDuration: 250,
+                    onCloseEnd: null,
+                    onCloseStart: null,
+                    onOpenEnd: null,
+                    onOpenStart: null,
+                    outDuration: 200,
+                    preventScrolling: true
+                }}
+                sidenav={<li>Custom node!</li>}
+                className="transparent z-depth-0"
+            >
+                {links.map(createNavItem)}
+                <button>
+                    <NavItem href={ResumeFr} className="link-primary">
+                        Resume
+                    </NavItem>
+                </button>
+            </Navbar>
+{/*            <Navbar dark  expand="md" className="d-flex justify-content-between">
                 <NavbarBrand href="/" className="h-logo"><img src={Logo} alt="Logo" width="90" height="70"/></NavbarBrand>
                 <div>
                     <Collapse isOpen={isOpen} navbar>
@@ -35,7 +56,7 @@ const Header = () => {
                     </Collapse>
                 </div>
                 <NavbarToggler onClick={toggle}/>
-            </Navbar>
+            </Navbar>*/}
         </header>
     );
 };
