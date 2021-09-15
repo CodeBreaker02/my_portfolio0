@@ -15,6 +15,10 @@ const Header = () => {
         <NavItem href={href} className={className}>{text}</NavItem>
     );
 
+    const createSimpleList = ({ href, text }) => (
+        <li><a href={href} data-text={text}>{text}</a></li>
+    );
+
     return (
         <header>
             <Navbar
@@ -22,9 +26,10 @@ const Header = () => {
                 brand={<a className="brand-logo" href="#"><img src={Logo} alt="Logo" width="90" height="70"/></a>}
                 id="mobile-nav"
                 menuIcon={<Icon>menu</Icon>}
+                centerLogo={false}
                 options={{
                     draggable: true,
-                    edge: 'right',
+                    edge: 'left',
                     inDuration: 250,
                     onCloseEnd: null,
                     onCloseStart: null,
@@ -33,7 +38,13 @@ const Header = () => {
                     outDuration: 200,
                     preventScrolling: true
                 }}
-                sidenav={<li>Custom node!</li>}
+                sidenav={
+                    <div className="mobile-navigation">
+                        <ul>
+                            {links.map(createSimpleList)}
+                        </ul>
+                    </div>
+                }
                 className="transparent z-depth-0"
             >
                 {links.map(createNavItem)}
