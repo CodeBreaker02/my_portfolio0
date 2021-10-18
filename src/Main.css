@@ -1,24 +1,36 @@
 main {
     margin: 0 auto;
-    width: 93.5%;
 }
 
 .sections {
-    margin-left: 15%;
     margin-top: 6%;
     margin-bottom: 5%;
+}
+
+.container {
+    max-width: 1300px!important;
+}
+.presentation h1 {
+    line-height: 80%!important;
 }
 
 .presentation h5 {
     color: var(--primary);
 }
 
+.presentation h1 {
+    font-weight: bold;
+}
+
 .presentation .slate {
     color: var(--slate);
 }
 
-.presentation .check-soc .btn-lg {
-     background-color: transparent;
+.description p {
+    font-weight: 500;
+}
+.desk {
+    margin-top: 6%;
 }
 
 .left-social {
@@ -138,14 +150,10 @@ main {
 
 .contact {
     max-width: 600px!important;
-    margin: 0px auto 100px;
+    margin: 0 auto 100px;
     text-align: center;
 }
 
 .contact h6 {
     color: var(--primary);
-}
-
-section {
-    margin: 10%;
 }
